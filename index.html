@@ -1,33 +1,11 @@
 <!DOCTYPE html>
-
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="">
-</head>
-
-<body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-    <script src="" async defer></script>
-</body>
-
-</html>
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music Card</title>
+    <link rel="icon" type="image/png" href="tomato.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -38,38 +16,64 @@
 
     <main>
         <div class="container mt-2 px-2">
-            <div class="row mt-2">
+            <div class="row">
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <header>
-                        <h1 class="display-4">Nu Genea - Bar Mediterraneo</h1>
+                        <h1 class="display-4">Tomato Production - Pomodoro</h1>
 
                     </header>
                     <article class=" text-justify">
                         <p>
-                            <img class="float-start me-3" src="ng-records.png" style="width: 100px;">Four years after
-                            Nuova Napoli, Nu Genea are back with Bar Mediterraneo, a new album and journey, which
-                            projects the sounds of the Neapolitan duo formed by Massimo Di Lena and Lucio Aquilina even
-                            further.
+                            <img class="float-start me-3" src="tomato.png" style="width: 100px;">Four years ago I went
+                            to Naples and
+                            I liked the pizza so much I decided to create <b>Tomato Production</b>, a new
+                            album and journey, which
+                            projects the sounds of relaxation reached eating pizza while walking through Naples gulf
+                            coast.
                         </p>
-                        <p>Nu Genea's Bar Mediterraneo is an idea of a shared place where people meet and fuse together;
-                            a space
-                            that leaves its doors open to travellers and their lives, always exposed to the whims of
-                            fate. Some
-                            of this can be experienced through the multitude of sounds that come together in the tracks,
-                            layers
-                            of different acoustic instruments, voices and synthesizers merging in a unique musical
-                            blend.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis
+                            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint
+                            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+                            laborum.</p>
                     </article>
+                    <div class="music-list">
+                        <div class="music-list-entry">
+                            <div>
+                                <i class="bi bi-music-note-beamed"></i> Background
+                            </div>
+                            <div><button id="background-play-button"><i id="playPauseIcon01"
+                                        class="bi bi-play-circle-fill"></i></button></div>
+                        </div>
+                        <div class="music-list-entry">
+                            <div>
+                                <i class="bi bi-music-note-beamed"></i> Chill
+                            </div>
+                            <div><button id="chill-play-button"><i id="playPauseIcon02"
+                                        class="bi bi-play-circle-fill"></i></button></div>
+                        </div>
+                        <div class="music-list-entry">
+                            <div>
+                                <i class="bi bi-music-note-beamed"></i> Tokyo
+                            </div>
+                            <div><button id="tokyo-play-button"><i id="playPauseIcon03"
+                                        class="bi bi-play-circle-fill"></i></button></div>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card px-2" style="width: 16rem;">
-                        <audio id="musicPlayer" src="bar_mediterraneo.mp3" hidden></audio>
-                        <img src="./nugenea.gif" class="card-img-top rounded d-block mt-2"
-                            alt="Bar Mediterraneo's album cover, a sea shore with fishes sprouting out of the water seen from a mediterranean panorama">
+                    <div class="card px-2" style="width: 20rem; margin: 1em auto;">
+                        <audio id="musicPlayer" src="./music/background.mp3" hidden></audio>
+                        <img src="./waves.gif" class="card-img-top rounded d-block mt-2"
+                            alt="Music frequences that wave randomly, representing music being played.">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Bar Mediterraneo</h5>
+                            <h5 class="card-title text-center" id="song-title">Background</h5>
                             <div class="d-flex justify-content-center">
-                                <button id="playButton" class="btn btn-lg">
+                                <button id="global-play-button" class="btn btn-lg">
                                     <i id="playPauseIcon" class="bi bi-play-circle-fill"></i>
                                 </button>
                             </div>
@@ -92,7 +96,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </main>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
