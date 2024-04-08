@@ -2,7 +2,13 @@
 
 Applicazione che gestisce la riproduzione di brani musicali
 
-////
+#### 2024-04-09 - Andrea
+
+-   risolti i due problemi riscontrati da Leo
+-   aggiunta la tarantella napoletana in tema con la Tomato Production
+-   tradotto in napoletano il secondo testo "Lorem ipsum ...", per rimanere sempre in tema
+-   IMPROVEMENT: mettere, per ogni brano musicale, un'immagine correlata (es: Napoli per la tarantella, Tokyo per tokyo)
+
 #### 2024-04-07 - Pinna
 
 -   inseriti 3 elementi html per le canzoni differenti da poter ascoltare
