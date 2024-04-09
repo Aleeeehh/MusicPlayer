@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-8 col-md-6 col-sm-12">
                     <header>
-                        <h1 class="display-4">Tomato Production - Pomodoro</h1>
+                        <h1 class="display-4">Tomato Production!</h1>
 
                     </header>
                     <article class=" text-justify">
@@ -31,12 +31,15 @@
                             projects the sounds of relaxation reached eating pizza while walking through Naples' gulf
                             coast.
                         </p>
-                        <p>È assai importante ca o cliente sia cuscìent de 'e soi esigenze, ma è 'a stessa cosa ca s'adda succedere contemporaneamente
-                            cu gran fatiga e dolore. Alcuno vengono infatti ai cchiù picceri dettagli: 'a penza nisciuno ddoje pizzejá nisciuno tipp' 'e ccuópere se non comme 'na sorta 'e persona
+                        <p>È assai importante ca o cliente sia cuscìent de 'e soi esigenze, ma è 'a stessa cosa ca
+                            s'adda succedere contemporaneamente
+                            cu gran fatiga e dolore. Alcuno vengono infatti ai cchiù picceri dettagli: 'a penza nisciuno
+                            ddoje pizzejá nisciuno tipp' 'e ccuópere se non comme 'na sorta 'e persona
                             trarne beneficio. Chianza
                             oppure 'o dolore sarà rimproverato 'o piacere, e 'e'mmobì 'o dolore nun ce saranno peli
                             essere nato So 'nu sbaglio
-                            le cupisce scure nun escono' 'a scéte, so in colpa quelli ca abbandonano 'e soie doveri, cioè l' anima se strascuoglie
+                            le cupisce scure nun escono' 'a scéte, so in colpa quelli ca abbandonano 'e soie doveri,
+                            cioè l' anima se strascuoglie
                             spuntini.</p>
                     </article>
                     <div class="music-list">
@@ -44,8 +47,11 @@
                             <div>
                                 <i class="bi bi-music-note-beamed"></i> Tarantella Napoletana
                             </div>
-                            <div><button id="tarantella-play-button"><i id="playPauseIcon01"
-                                        class="bi bi-play-circle-fill"></i></button></div>
+                            <div>
+                                <button id="tarantella-play-button">
+                                    <i id="playPauseIcon01" class="bi bi-play-circle-fill"></i>
+                                </button>
+                            </div>
                         </div>
                         <div class="music-list-entry">
                             <div>
@@ -63,7 +69,7 @@
                         </div>
                         <div class="music-list-entry">
                             <div>
-                                <i class="bi bi-music-note-beamed"></i> Background
+                                <i class="bi bi-music-note-beamed"></i> Maskros
                             </div>
                             <div><button id="background-play-button"><i id="playPauseIcon04"
                                         class="bi bi-play-circle-fill"></i></button></div>
@@ -71,16 +77,30 @@
 
                     </div>
                 </div>
+
+
+
+
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card px-2" style="width: 20rem; margin: 1em auto;">
                         <audio id="musicPlayer" src="./music/Tarantella.mp3" hidden></audio>
-                        <img src="./waves.gif" class="card-img-top rounded d-block mt-2"
+                        <img src="./napoli.jpg" id="musicIcon" class="card-img-top rounded d-block mt-2"
                             alt="Music frequences that wave randomly, representing music being played.">
+
                         <div class="card-body">
                             <h5 class="card-title text-center" id="song-title">Tarantella Napoletana</h5>
                             <div class="d-flex justify-content-center">
+
+                                <button id="back" class="btn btn-lg">
+                                    &lt;&lt;
+                                </button>
+
                                 <button id="global-play-button" class="btn btn-lg">
                                     <i id="playPauseIcon" class="bi bi-play-circle-fill"></i>
+                                </button>
+
+                                <button id="skip" class="btn btn-lg">
+                                    &gt;&gt;
                                 </button>
                             </div>
                             <div class="volume-control-container d-flex align-items-center justify-content-center">

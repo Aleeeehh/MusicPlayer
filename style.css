@@ -1,7 +1,20 @@
+body {
+	background-image: url("wallpaper2.png");
+}
+
+header {
+	color: rgb(93, 27, 27);
+
+}
+
 .volume-slider {
 	width: 0;
 	opacity: 0;
 	transition: opacity 0.5s ease, width 0.5s ease;
+}
+
+.card {
+	background-color: antiquewhite;
 }
 
 .volume-control-container:hover .volume-slider {
@@ -27,8 +40,41 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	background: #3873fb;
+	background-color: antiquewhite;
 	padding: 0.8em;
 	border-radius: 5px;
-	color: white;
+	color: rgb(0, 0, 0);
+}
+
+#volumeControl::-webkit-slider-thumb {
+	background-color: rgb(247, 211, 164);
+	/* Cambia il colore del pallino */
+}
+
+/* Per browser Mozilla come Firefox */
+#volumeControl::-moz-range-thumb {
+	background-color: rgb(247, 211, 164);
+	/* Cambia il colore del pallino */
+}
+
+/* Per browser Microsoft come Edge */
+#volumeControl::-ms-thumb {
+	background-color: rgb(247, 211, 164);
+	/* Cambia il colore del pallino */
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+	background-color: rgb(255, 255, 255);
+	/* Cambia il colore della traccia dietro il pallino */
+}
+
+
+.progress-bar::-moz-range-track {
+	background-color: rgb(255, 255, 255);
+	/* Cambia il colore della traccia dietro il pallino */
+}
+
+.progress-bar::-ms-track {
+	background-color: rgb(255, 255, 255);
+	/* Cambia il colore della traccia dietro il pallino */
 }

@@ -1,7 +1,10 @@
 const audio = document.getElementById("musicPlayer");
+const icon = document.getElementById("musicIcon");
 const progressSlider = document.getElementById("progressSlider");
 const currentTimeDisplay = document.getElementById("currentTime");
 const totalDurationDisplay = document.getElementById("totalDuration");
+const back = document.getElementById("back");
+const skip = document.getElementById("skip");
 
 const songTitle = document.getElementById("song-title");
 const globalPlayButton = document.getElementById("global-play-button");
@@ -20,7 +23,7 @@ let isPlaying = false;
 let currentIcon = playPauseIcon01;
 let playingIcon = playPauseIcon01;
 
-let songs = { TARANTELLA: "Tarantella Napoletana" , BACKGROUND: "Background", CHILL: "Chill", TOKYO: "Tokyo" };
+let songs = { TARANTELLA: "Tarantella Napoletana", BACKGROUND: "Maskros", CHILL: "Chill", TOKYO: "Tokyo" };
 
 // Play/Pause toggle function
 function togglePlayPause() {
@@ -97,6 +100,60 @@ function resetProgressBar() {
 	totalDurationDisplay.textContent = formatTime(audio.duration);
 }
 
+function backHandler() {
+	if (songTitle.innerText === songs.TARANTELLA) {
+		songTitle.innerText = songs.BACKGROUND;
+		currentIcon = playPauseIcon04;
+		audio.src = "./music/maskros.mp3";
+		icon.src = "/maskros.jpg";
+	} else if (songTitle.innerText === songs.CHILL) {
+		songTitle.innerText = songs.TARANTELLA;
+		currentIcon = playPauseIcon01;
+		audio.src = "./music/Tarantella.mp3";
+		icon.src = "/napoli.jpg";
+	} else if (songTitle.innerText === songs.TOKYO) {
+		songTitle.innerText = songs.CHILL;
+		currentIcon = playPauseIcon03;
+		audio.src = "./music/chill.mp3";
+		icon.src = "/chill.png";
+	} else if (songTitle.innerText === songs.BACKGROUND) {
+		songTitle.innerText = songs.TOKYO;
+		currentIcon = playPauseIcon03;
+		audio.src = "./music/tokyo.mp3";
+		icon.src = "/tokyo.jpg";
+	}
+	// Avvia la nuova canzone
+	togglePlayPause();
+}
+
+function skipHandler() {
+	if (songTitle.innerText === songs.TARANTELLA) {
+		songTitle.innerText = songs.CHILL;
+		currentIcon = playPauseIcon02;
+		audio.src = "./music/chill.mp3";
+		icon.src = "/chill.png";
+	} else if (songTitle.innerText === songs.CHILL) {
+		songTitle.innerText = songs.TOKYO;
+		currentIcon = playPauseIcon03;
+		audio.src = "./music/tokyo.mp3";
+		icon.src = "/tokyo.jpg";
+	} else if (songTitle.innerText === songs.TOKYO) {
+		songTitle.innerText = songs.BACKGROUND;
+		currentIcon = playPauseIcon04;
+		audio.src = "./music/maskros.mp3";
+		icon.src = "/maskros.jpg";
+	}
+
+	else if (songTitle.innerText === songs.BACKGROUND) {
+		songTitle.innerText = songs.TARANTELLA;
+		currentIcon = playPauseIcon01;
+		audio.src = "./music/Tarantella.mp3";
+		icon.src = "/napoli.jpg";
+	}
+	// Avvia la nuova canzone
+	togglePlayPause();
+}
+
 audio.onended = resetProgressBar;
 
 // Volume Control remains unchanged
@@ -105,36 +162,46 @@ document.getElementById("volumeControl").addEventListener("input", function () {
 });
 
 globalPlayButton.addEventListener("click", togglePlayPause);
+// Evento click per il pulsante back
+back.addEventListener("click", backHandler);
+
+// Evento click per il pulsante skip
+skip.addEventListener("click", skipHandler);
 
 tarantellaPlayButton.addEventListener("click", () => {
-	if (playingIcon != playPauseIcon01){
-	songTitle.innerText = songs.TARANTELLA;
-	currentIcon = playPauseIcon01;
-	audio.src = "./music/Tarantella.mp3";
+	if (playingIcon != playPauseIcon01) {
+		songTitle.innerText = songs.TARANTELLA;
+		currentIcon = playPauseIcon01;
+		audio.src = "./music/Tarantella.mp3";
+		icon.src = "./napoli.jpg";
 	}
 	togglePlayPause();
 });
 chillPlayButton.addEventListener("click", () => {
-	if (playingIcon != playPauseIcon02){
-	songTitle.innerText = songs.CHILL;
-	currentIcon = playPauseIcon02;
-	audio.src = "./music/chill.mp3";
+	if (playingIcon != playPauseIcon02) {
+		songTitle.innerText = songs.CHILL;
+		currentIcon = playPauseIcon02;
+		audio.src = "./music/chill.mp3";
+		icon.src = "/chill.png";
+
 	}
 	togglePlayPause();
 });
 tokyoPlayButton.addEventListener("click", () => {
-	if (playingIcon != playPauseIcon03){
-	songTitle.innerText = songs.TOKYO;
-	currentIcon = playPauseIcon03;
-	audio.src = "./music/tokyo.mp3";
+	if (playingIcon != playPauseIcon03) {
+		songTitle.innerText = songs.TOKYO;
+		currentIcon = playPauseIcon03;
+		audio.src = "./music/tokyo.mp3";
+		icon.src = "/tokyo.jpg";
 	}
 	togglePlayPause();
 });
 backgroundPlayButton.addEventListener("click", () => {
-	if (playingIcon != playPauseIcon04){
-	songTitle.innerText = songs.BACKGROUND;
-	currentIcon = playPauseIcon04;
-	audio.src = "./music/background.mp3";
+	if (playingIcon != playPauseIcon04) {
+		songTitle.innerText = songs.BACKGROUND;
+		currentIcon = playPauseIcon04;
+		audio.src = "./music/maskros.mp3";
+		icon.src = "/maskros.jpg";
 	}
 	togglePlayPause();
 });
