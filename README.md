@@ -1,6 +1,13 @@
 # MusicPlayer
 
-Applicazione che gestisce la riproduzione di brani musicali
+Applicazione che gestisce la riproduzione di brani musicali, con 4 brani musicali integrati
+
+#### 2024-04-09 - Ale
+
+- aggiunti vari miglioramenti grafici, come lo sfondo, il colore di menù e di barre
+- ora esiste un immagine dedicata per ogni brano
+- tolto il brano background e sostituito con maskros
+- aggiunti i pulsanti per skip e back funzionanti
 
 #### 2024-04-09 - Andrea
 
