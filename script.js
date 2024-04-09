@@ -113,7 +113,7 @@ function backHandler() {
 		icon.src = "./napoli.jpg";
 	} else if (songTitle.innerText === songs.TOKYO) {
 		songTitle.innerText = songs.CHILL;
-		currentIcon = playPauseIcon03;
+		currentIcon = playPauseIcon02;
 		audio.src = "./music/chill.mp3";
 		icon.src = "./chill.png";
 	} else if (songTitle.innerText === songs.BACKGROUND) {
@@ -143,7 +143,6 @@ function skipHandler() {
 		audio.src = "./music/maskros.mp3";
 		icon.src = "./maskros.jpg";
 	}
-
 	else if (songTitle.innerText === songs.BACKGROUND) {
 		songTitle.innerText = songs.TARANTELLA;
 		currentIcon = playPauseIcon01;
