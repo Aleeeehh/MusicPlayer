@@ -105,22 +105,22 @@ function backHandler() {
 		songTitle.innerText = songs.BACKGROUND;
 		currentIcon = playPauseIcon04;
 		audio.src = "./music/maskros.mp3";
-		icon.src = "/maskros.jpg";
+		icon.src = "./maskros.jpg";
 	} else if (songTitle.innerText === songs.CHILL) {
 		songTitle.innerText = songs.TARANTELLA;
 		currentIcon = playPauseIcon01;
 		audio.src = "./music/Tarantella.mp3";
-		icon.src = "/napoli.jpg";
+		icon.src = "./napoli.jpg";
 	} else if (songTitle.innerText === songs.TOKYO) {
 		songTitle.innerText = songs.CHILL;
 		currentIcon = playPauseIcon03;
 		audio.src = "./music/chill.mp3";
-		icon.src = "/chill.png";
+		icon.src = "./chill.png";
 	} else if (songTitle.innerText === songs.BACKGROUND) {
 		songTitle.innerText = songs.TOKYO;
 		currentIcon = playPauseIcon03;
 		audio.src = "./music/tokyo.mp3";
-		icon.src = "/tokyo.jpg";
+		icon.src = "./tokyo.jpg";
 	}
 	// Avvia la nuova canzone
 	togglePlayPause();
@@ -131,24 +131,24 @@ function skipHandler() {
 		songTitle.innerText = songs.CHILL;
 		currentIcon = playPauseIcon02;
 		audio.src = "./music/chill.mp3";
-		icon.src = "/chill.png";
+		icon.src = "./chill.png";
 	} else if (songTitle.innerText === songs.CHILL) {
 		songTitle.innerText = songs.TOKYO;
 		currentIcon = playPauseIcon03;
 		audio.src = "./music/tokyo.mp3";
-		icon.src = "/tokyo.jpg";
+		icon.src = "./tokyo.jpg";
 	} else if (songTitle.innerText === songs.TOKYO) {
 		songTitle.innerText = songs.BACKGROUND;
 		currentIcon = playPauseIcon04;
 		audio.src = "./music/maskros.mp3";
-		icon.src = "/maskros.jpg";
+		icon.src = "./maskros.jpg";
 	}
 
 	else if (songTitle.innerText === songs.BACKGROUND) {
 		songTitle.innerText = songs.TARANTELLA;
 		currentIcon = playPauseIcon01;
 		audio.src = "./music/Tarantella.mp3";
-		icon.src = "/napoli.jpg";
+		icon.src = "./napoli.jpg";
 	}
 	// Avvia la nuova canzone
 	togglePlayPause();
@@ -182,7 +182,7 @@ chillPlayButton.addEventListener("click", () => {
 		songTitle.innerText = songs.CHILL;
 		currentIcon = playPauseIcon02;
 		audio.src = "./music/chill.mp3";
-		icon.src = "/chill.png";
+		icon.src = "./chill.png";
 
 	}
 	togglePlayPause();
@@ -192,7 +192,7 @@ tokyoPlayButton.addEventListener("click", () => {
 		songTitle.innerText = songs.TOKYO;
 		currentIcon = playPauseIcon03;
 		audio.src = "./music/tokyo.mp3";
-		icon.src = "/tokyo.jpg";
+		icon.src = "./tokyo.jpg";
 	}
 	togglePlayPause();
 });
@@ -201,7 +201,7 @@ backgroundPlayButton.addEventListener("click", () => {
 		songTitle.innerText = songs.BACKGROUND;
 		currentIcon = playPauseIcon04;
 		audio.src = "./music/maskros.mp3";
-		icon.src = "/maskros.jpg";
+		icon.src = "./maskros.jpg";
 	}
 	togglePlayPause();
 });
